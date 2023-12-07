@@ -20,7 +20,7 @@ app.use(authRouter);
 app.use(adminRouter);
 
 mongoose
-  .connect("mongodb+srv://riasatsk:DB_PASS@database1.vdkvpvp.mongodb.net/?retryWrites=true&w=majority")
+  .connect("mongodb+srv://riasatsk:_Xvm4c_ER8rNzkw@database1.vdkvpvp.mongodb.net/?retryWrites=true&w=majority")
   .then(() => {
     app.listen(PORT);
   })
