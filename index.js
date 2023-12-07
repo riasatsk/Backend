@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 const PORT = process.env.PORT || 3030;
-const DB_PASS = process.env.DB_PASS
+
 import { authRouter } from "./routes/auth.js";
 import { adminRouter } from "./routes/admin.js";
 
