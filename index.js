@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
-
+const PORT = process.env.PORT || 3030;
+const DB_PASS = process.env.DB_PASS
 import { authRouter } from "./routes/auth.js";
 import { adminRouter } from "./routes/admin.js";
 
@@ -19,9 +20,9 @@ app.use(authRouter);
 app.use(adminRouter);
 
 mongoose
-  .connect("mongodb://localhost:27017/krittim")
+  .connect("mongodb+srv://riasatsk:DB_PASS@database1.vdkvpvp.mongodb.net/?retryWrites=true&w=majority")
   .then(() => {
-    app.listen(3000);
+    app.listen(PORT);
   })
   .catch((err) => {
     console.log(err);
